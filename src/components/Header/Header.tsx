@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import { FaGithub, FaLinkedin, FaSun, FaMoon } from 'react-icons/fa';
+import {useState, useEffect} from 'react';
+import { FaGithub, FaLinkedin} from 'react-icons/fa';
 
 const Header = () => {
 
@@ -13,7 +13,7 @@ const Header = () => {
     }
   }, [pageMode]);
 
-  const togglePageMode = () => setPageMode(!pageMode);
+  //const togglePageMode = () => setPageMode(!pageMode);
 
   return (
     <header className="bg-white dark:bg-gray text-black dark:text-white shadow-md px-4 py-3 fixed top-0 w-full z-50 font-bold">
