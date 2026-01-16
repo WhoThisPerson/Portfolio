@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <main>
       <Header />
-      <main className="pt-20">
+      <main className="pt-20 bg-gray-dark text-gray-light min-h-screen">
         <section><About /></section>
         <section><Education /></section>
         <section><Projects /></section>
