@@ -12,6 +12,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout Repository
@@ -24,12 +26,10 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest 
-
-    steps:
+      
+      - name: Run Build
+        run: npm run build
+      
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
