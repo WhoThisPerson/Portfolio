@@ -12,9 +12,9 @@ const HomePage = () => {
       <Header />
       <main className="pt-20 bg-gray-dark text-gray-light min-h-screen">
         <section><About /></section>
+        <section><Experience /></section>
         <section><Education /></section>
         <section><Projects /></section>
-        <section><Experience /></section>
       </main>
     </main>
   );
