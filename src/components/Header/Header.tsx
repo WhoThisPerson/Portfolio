@@ -21,7 +21,7 @@ const Header = () => {
         <ul className="flex space-x-4 text-lg">
         <li>
           <a
-            href="https://docs.google.com/document/d/1JqgTJTaxdq7ZYWogMZGDSY903alMzro75JrulJvKc1M/edit?usp=sharing"
+            href="public/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={iconLink}
