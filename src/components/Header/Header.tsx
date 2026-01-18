@@ -13,15 +13,16 @@ const Header = () => {
 
         <ul className="flex space-x-6 text-lg">
           <li><a href="#About" className={navLink}>About</a></li>
+          <li><a href="#Experience" className={navLink}>Experience</a></li>
           <li><a href="#Education" className={navLink}>Education</a></li>
           <li><a href="#Projects" className={navLink}>Projects</a></li>
-          <li><a href="#Experience" className={navLink}>Experience</a></li>
+
         </ul>
 
         <ul className="flex space-x-4 text-lg">
         <li>
           <a
-            href="public/Resume.pdf"
+            href="Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={iconLink}

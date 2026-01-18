@@ -1,34 +1,71 @@
-// import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 
 const Experience = () => {
 
-    // const experienceInfo = [
-    //     {
-    //         company: "Handshake",
-    //         location: "Remote",
-    //         position: "AI Fellow",
-    //         start: "December 2025",
-    //         end: "Present",
-    //     },
-    //     {
-    //         company: "LadySurvivor & Family Benches",
-    //         location: "New York, NY",
-    //         position: "Project Management Intern",
-    //         start: "July 2025",
-    //         end: "August 2025",
-    //     },
-    //     {
-    //         company: "SUNY - Stony Brook University",
-    //         location: "Stony Brook, NY",
-    //         position: "Undergraduate Teaching Assistant",
-    //         start: "August 2023",
-    //         end: "May 2024",
-    //     }
-    // ]
+    const experienceInfo = [
+        {
+            company: "Handshake",
+            location: "Remote",
+            position: "AI Fellow",
+            role_type: "Part-Time",
+            start: "December 2025",
+            end: "Present",
+            details: []
+        },
+        {
+            company: "LadySurvivor & Family Benches",
+            location: "New York, NY",
+            position: "Project Management Intern",
+            role_type: "Internship",
+            start: "July 2025",
+            end: "August 2025",
+            details: [
+                "Supported the planning and execution of community projects for the non-profit organization",
+                "Coordinated with fellow interns to ensure quality completion of tasks within deadlines"
+            ]
+        },
+        {
+            company: "SBU",
+            location: "Stony Brook, NY",
+            position: "Undergraduate Teaching Assistant",
+            role_type: "Part-Time",
+            start: "August 2023",
+            end: "May 2024",
+            details: [
+                "Selected as a teaching assistant for Stony Brook's Introduction to Object-Oriented Programming course (CSE 114) for the Fall Semester of 2023 and Spring Semester of 2024",
+                "Assisted professor in conducting and grading bi-weekly lab sessions, providing guidance and support to 30 students on Java programming concepts and assignments",
+                "Held weekly office hours to address student questions/concerns, assist in HW assignments, and clarify course material",
+            ]
+        }
+    ]
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-20" id="Experience">
+        <div className="max-w-4xl mx-auto px-4 py-5" id="Experience">
             <h2 className="text-3xl font-bold mb-8 underline">Experience</h2>
+
+            {experienceInfo.map((exp, index) => (
+                <div key={index} className="mb-10">
+                    <div className="flex justify-between items-center">
+                        <h3 className="font-bold text-xl">{exp.position} @ {exp.company}</h3>
+                        <p className="font-bold text-xl">{exp.role_type}</p>
+
+                    </div>
+
+                    <div className="flex justify-between items-center">
+                        <p className="italic"><FaMapMarkerAlt className="inline mr-2 text-red-500" />{exp.location}</p>
+                        <p className="italic"><FaCalendarAlt className="inline mr-2 text-red-500" />{exp.start} - {exp.end}</p>
+                    </div>
+                    
+                    {exp.details.length > 0 && (
+                        <ul className="list-disc list-inside mt-2">
+                            {exp.details.map((detail, detailIndex) => (
+                                <li key={detailIndex}>{detail}</li>
+                            ))}
+                        </ul>
+                    )}
+
+                </div>
+            ))}
         </div>
     )
 }
