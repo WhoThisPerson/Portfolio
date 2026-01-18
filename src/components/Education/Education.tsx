@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 
 const Education = () => {
 
@@ -6,7 +6,7 @@ const Education = () => {
         {
             school: "SUNY - Stony Brook University",
             location: "Stony Brook, NY",
-            degree: "Bachelor of Science in Computer Science",
+            degree: "B.Sc in Computer Science",
             start: "August 2021",
             end: "May 2025"
         },
@@ -20,18 +20,21 @@ const Education = () => {
     ];
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-20" id="Education">
+        <div className="max-w-4xl mx-auto px-4 py-5" id="Education">
             <h2 className="text-3xl font-bold mb-8 underline">Education</h2>
 
             {educationInfo.map((edu, index) => (
                 <div key={index} className="mb-6">
                     <div className="flex justify-between items-center">
-                        <h3 className="font-bold">{edu.school}</h3>
-                        <p className="font-bold">{edu.start} - {edu.end}</p>
+                        <h3 className="font-bold text-xl">{edu.school}</h3>
+                        <p className="font-bold text-xl">{edu.degree}</p>
                     </div>
-                    
-                    <p className="italic"><FaMapMarkerAlt className="inline mr-2 text-red-500" />{edu.location}</p>
-                    <p className="font-bold mt-2">{edu.degree}</p>
+
+                    <div className="flex justify-between items-center">
+                        <p className="italic"><FaMapMarkerAlt className="inline mr-2 text-red-500" />{edu.location}</p>
+                        <p className="italic"><FaCalendarAlt className="inline mr-2 text-red-500" />{edu.start} - {edu.end}</p>
+                    </div>
+        
                 </div>
             ))}
 
