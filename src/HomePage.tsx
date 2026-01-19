@@ -41,8 +41,8 @@ const HomePage = () => {
 
 				</div>
 
-				{pageToggle === "Experience" && <section><Experience /></section>}
-				{pageToggle === "Education" && <section><Education /></section>}
+				{pageToggle === "Experience" && <section className="animate-fadeIn"><Experience /></section>}
+				{pageToggle === "Education" && <section className="animate-fadeIn"><Education /></section>}
 				<section><Projects /></section>
 			</main>
 		</main>

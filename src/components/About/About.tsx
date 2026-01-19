@@ -1,14 +1,22 @@
-import { FaMapMarkerAlt, FaUser } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaUser, FaCircle } from 'react-icons/fa';
 
 const About = () => {
     return (
-        <div className="max-w-4xl mx-auto px-4 py-20" id="About">
+        <div className="max-w-5xl mx-auto px-4 py-20" id="About">
             {/*Wrapper for Left and Right sides*/}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+            <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6">
                 {/* Left Side Wrapper - Photo*/}
-                <div className="w-24 h-24 rounded-full bg-gray-700 flex items-center justify-center">
+                <div className="bg-gray-700 flex flex-col">
                     {/* Placeholder for Photo */}
-                    <FaUser className="text-gray-400 w-24 h-24" />
+                    <FaUser 
+                        className="text-gray-light text-9xl mt-5 mx-auto"
+                    />
+
+                    {/* Available for work indicator */}
+                    <div className="flex items-center gap-2 text-sm mt-2">
+                        <FaCircle className="text-green w-5 h-5 mt-5" />
+                        <span className="text-lg mt-5">Available for Work</span>
+                    </div>
                 </div>
 
                 {/* Right Side Wrapper- Details */}
