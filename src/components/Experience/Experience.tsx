@@ -32,8 +32,9 @@ const Experience = () => {
             start: "August 2023",
             end: "May 2024",
             details: [
-                "Selected as a teaching assistant for Stony Brook's Introduction to Object-Oriented Programming course (CSE 114) for the Fall Semester of 2023 and Spring Semester of 2024",
-                "Assisted professor in conducting and grading bi-weekly lab sessions, providing guidance and support to 30 students on Java programming concepts and assignments",
+                "Selected as a teaching assistant for the Introduction to Object-Oriented Programming course (CSE 114)",
+                "Served as a two-time TA during Fall 2023 and Spring 2024 semesters",
+                "Conducted and graded bi-weekly lab sessions consisting of 30 students",
                 "Held weekly office hours to address student questions/concerns, assist in HW assignments, and clarify course material",
             ]
         }
@@ -41,8 +42,7 @@ const Experience = () => {
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-5" id="Experience">
-            <h2 className="text-3xl font-bold mb-8 underline">Experience</h2>
-
+            
             {experienceInfo.map((exp, index) => (
                 <div key={index} className="mb-10">
                     <div className="flex justify-between items-center">
