@@ -13,8 +13,6 @@ const Header = () => {
 
         <ul className="flex space-x-6 text-lg">
           <li><a href="#About" className={navLink}>About</a></li>
-          <li><a href="#Experience" className={navLink}>Experience</a></li>
-          <li><a href="#Education" className={navLink}>Education</a></li>
           <li><a href="#Projects" className={navLink}>Projects</a></li>
 
         </ul>
