@@ -22,17 +22,16 @@ const About = () => {
                 {/* Right Side Wrapper- Details */}
                 <div>
                     <div className="text-bold text-xl mb-4 flex items-center space-x-2">
-                        Hi. My name is Qirong ("Chee-Wrong"). Friends and family call me  Jason.
+                        Hi. My name is Qirong ("Chee-Wrong"). Friends and family call me Jason.
                     </div>
                     <div className="text-bold text-lg mb-4 flex items-center space-x-2">
-                        I am a software developer based in
-                        {" "}
+                        Software Developer based in{" "}
                         <FaMapMarkerAlt className="inline mb-1 text-red-500 ml-1" /> 
                         New York.
                     </div>
 
                     <div className="mt-4">
-                        Current seeking opportunities in full-time software development roles.
+                        Currently seeking opportunities in full-time software development roles.
                         In the mean time, I am working on personal projects to improve my skills
                         or working/volunteering on the side.
                     </div>

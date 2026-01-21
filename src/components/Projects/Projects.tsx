@@ -2,6 +2,21 @@ import { useEffect, useState } from "react";
 
 const Projects = () => {
 
+    const projectInfo = [
+        {
+            name: "Fake Stack Overflow",
+            description: "Mock version of Q&A platform, Stack Overflow built in collaboration with another developer. Features include user account creation, posting questions and answers, commenting, voting, and searching.",
+            techStack: "React, Node.js, Express, MongoDB",
+            link: "https://github.com/WhoThisPerson/FakeStackOverflow",
+        },
+        {
+            name: "System Fundamentals II",
+            description: "Collection of low-level programming assignments which include implementing C's memory functions, daemon process management, and a charla chat program using sockets and multi-threading",
+            techStack: "C",
+            link: "https://github.com/WhoThisPerson/CSE-320-Spring-2024",
+        },
+    ];
+
     const [event, setEvent] = useState<any | null>(null);
 
     useEffect(() => {
@@ -61,8 +76,37 @@ const Projects = () => {
                         <p className="italic ml-5">Made on: {latestCommit.date}</p>
                     </div>
                 )}
-
             </div>
+            
+            {/* Projects List Section */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                {projectInfo.map((project, index) => (
+                    <div key={index} className="w-full border rounded-lg p-4 mb-4 mt-10 shadow-lg">
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-2xl font-bold text-blue hover:underline"
+                        >
+                            {project.name}
+                        </a>
+                        <p className="mb-2">{project.description}</p>
+                        <div>
+                            {project.techStack.split(", ").map((tech, techIndex) => (
+                                <span
+                                    key={techIndex}
+                                    className="border inline-block text-sm px-2 py-1 rounded-full mr-2 mb-2"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+
+                    </div>
+                ))}
+
+            </div>            
+
         </div>
     )
 }
