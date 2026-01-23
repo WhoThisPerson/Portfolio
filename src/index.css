@@ -12,6 +12,16 @@
     transform: translateY(0);
   }
 }
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 20s ease infinite;
+}
+
 
 .animate-fadeIn {
   animation: fadeIn 250ms ease-out;

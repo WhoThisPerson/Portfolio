@@ -2,7 +2,7 @@ import { FaMapMarkerAlt, FaUser, FaCircle } from 'react-icons/fa';
 
 const About = () => {
     return (
-        <div className="max-w-5xl mx-auto px-4 py-20" id="About">
+        <div className="max-w-5xl mx-auto py-20" id="About">
             {/*Wrapper for Left and Right sides*/}
             <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6">
                 {/* Left Side Wrapper - Photo*/}
