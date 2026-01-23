@@ -6,7 +6,7 @@ const About = () => {
             {/*Wrapper for Left and Right sides*/}
             <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6">
                 {/* Left Side Wrapper - Photo*/}
-                <div className="bg-gray-700 flex flex-col">
+                <div className="flex flex-col">
                     {/* Placeholder for Photo */}
                     <FaUser 
                         className="text-gray-light text-9xl mt-5 mx-auto"
@@ -14,7 +14,7 @@ const About = () => {
 
                     {/* Available for work indicator */}
                     <div className="flex items-center gap-2 text-sm mt-2">
-                        <FaCircle className="text-green w-5 h-5 mt-5" />
+                        <FaCircle className="text-green w-3 h-3 mt-5" />
                         <span className="text-lg mt-5">Available for Work</span>
                     </div>
                 </div>
@@ -32,8 +32,11 @@ const About = () => {
 
                     <div className="mt-4">
                         Currently seeking opportunities in full-time software development roles.
-                        In the mean time, I am working on personal projects to improve my skills
-                        or working/volunteering on the side.
+                    </div>
+
+                    <div className="mt-4">
+                        In the mean time, I am working on personal projects to improve my skills 
+                        or am working/volunteering on the side.
                     </div>
 
                     <p className="mt-4">

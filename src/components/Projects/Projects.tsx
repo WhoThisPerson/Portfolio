@@ -111,7 +111,7 @@ const Projects = () => {
             {/* Projects List Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projectInfo.map((project, index) => (
-                    <div key={index} className="w-full border rounded-lg p-4 mb-4 shadow-lg">
+                    <div key={index} className="w-full border rounded-xl p-4 mb-4 transition hover:-translate-y-3">
                         <a
                             href={project.link}
                             target="_blank"
@@ -125,7 +125,7 @@ const Projects = () => {
                             {project.techStack.split(", ").map((tech, techIndex) => (
                                 <span
                                     key={techIndex}
-                                    className="border inline-block text-sm px-2 py-1 rounded-full mr-2 mb-2"
+                                    className="border inline-block text-sm px-2 py-1 rounded-full mr-2 mb-2 transition hover:bg-white hover:text-gray-dark"
                                 >
                                     {tech}
                                 </span>
