@@ -10,11 +10,14 @@ import { useState } from 'react';
 const HomePage = () => {
 
 	const [pageToggle, setPageToggle] = useState<"Experience" | "Education">("Experience");
-
+	
 	return (
 		<main>
 			<Header />
-			<main className="pt-20 bg-gray-dark text-gray-light min-h-screen">
+			<main className="pt-20 bg-black text-gray-light min-h-screen
+				bg-gradient-to-tr from-black via-sky-900 to-black
+				bg-[length:200%_200%]
+				animate-gradient">
 				<section><About /></section>
 				{/* Toggle Button */}
 				<div className="max-w-4xl mx-auto px-4 py-5 flex gap-2">

@@ -70,20 +70,22 @@ const Projects = () => {
         } : null;
 
     return (
-        <div className="max-w-10xl mx-auto px-4 py-5 h" id="Projects">
+        <div className="max-w-10xl mx-auto px-4 py-14" id="Projects">
             <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
 
             {/* Wrapper for the GitHub Stats Section */}
             <div className="flex items-center justify-center mb-10">
                 {/* Contribution Graph */}
                 <div>
-                    <img src="https://github-readme-activity-graph.vercel.app/graph?username=WhoThisPerson&theme=github-compact"></img>
+                    <img 
+                    src="https://github-readme-activity-graph.vercel.app/graph?username=WhoThisPerson&theme=github-compact"
+                    className="border rounded"></img>
                 </div>
 
                 <img
                     src={latestCommit ? latestCommit.avatar_icon : ""}
                     alt="Avatar Icon"
-                    className="w-16 h-16 rounded-full ml-5"                
+                    className="w-16 h-16 rounded-full ml-5"
                 >
                 </img>
                 {/* Latest Commit Section*/}
@@ -97,7 +99,7 @@ const Projects = () => {
                             href={latestCommit.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue hover:underline"
+                            className="text-emerald-500 hover:underline"
                         >
                             {latestCommit.repo}
                         </a>
@@ -109,34 +111,33 @@ const Projects = () => {
             </div>
             
             {/* Projects List Section */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {projectInfo.map((project, index) => (
-                    <div key={index} className="w-full border rounded-xl p-4 mb-4 transition hover:-translate-y-3">
-                        <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-2xl font-bold text-blue hover:underline"
-                        >
-                            {project.name}
-                        </a>
-                        <p className="mb-2">{project.description}</p>
-                        <div>
-                            {project.techStack.split(", ").map((tech, techIndex) => (
-                                <span
-                                    key={techIndex}
-                                    className="border inline-block text-sm px-2 py-1 rounded-full mr-2 mb-2 transition hover:bg-white hover:text-gray-dark"
-                                >
-                                    {tech}
-                                </span>
-                            ))}
+            <div className="max-w-7xl mx-auto px-4 py-5 mt-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {projectInfo.map((project, index) => (
+                        <div key={index} className="border rounded-xl p-4 mb-4 transition hover:-translate-y-3">
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-2xl font-bold text-emerald-500 hover:underline"
+                            >
+                                {project.name}
+                            </a>
+                            <p className="mb-2">{project.description}</p>
+                            <div>
+                                {project.techStack.split(", ").map((tech, techIndex) => (
+                                    <span
+                                        key={techIndex}
+                                        className="border inline-block text-sm px-2 py-1 rounded-full mr-2 mb-2 transition hover:bg-white hover:text-gray-dark"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
-
-                    </div>
-                ))}
-
-            </div>            
-
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }
