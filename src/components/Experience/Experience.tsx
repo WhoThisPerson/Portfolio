@@ -41,7 +41,7 @@ const Experience = () => {
     ]
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-5" id="Experience">
+        <div className="max-w-4xl mx-auto px-4 py-5 border" id="Experience">
             
             {experienceInfo.map((exp, index) => (
                 <div key={index} className="mb-10">

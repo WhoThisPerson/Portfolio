@@ -20,7 +20,7 @@ const Education = () => {
     ];
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-5" id="Education">
+        <div className="max-w-4xl mx-auto px-4 py-5 border" id="Education">
             {educationInfo.map((edu, index) => (
                 <div key={index} className="mb-6">
                     <div className="flex justify-between items-center">
