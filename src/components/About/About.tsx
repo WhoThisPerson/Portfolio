@@ -9,7 +9,7 @@ const About = () => {
                 <div className="flex flex-col">
                     {/* Profile Picture Location */}
                     <img
-                        src="public/profile-picture.webp"
+                        src="profile-picture.webp"
                         alt="Profile Picture"
                         className="w-48 h-48 rounded-full mx-auto object-cover"
                     ></img>
