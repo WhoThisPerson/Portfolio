@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaUser, FaCircle } from 'react-icons/fa';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 const About = () => {
     return (
@@ -7,16 +7,18 @@ const About = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6">
                 {/* Left Side Wrapper - Photo*/}
                 <div className="flex flex-col">
-                    {/* Placeholder for Photo */}
-                    <FaUser 
-                        className="text-gray-light text-9xl mt-5 mx-auto"
-                    />
+                    {/* Profile Picture Location */}
+                    <img
+                        src="public/profile-picture.webp"
+                        alt="Profile Picture"
+                        className="w-48 h-48 rounded-full mx-auto object-cover"
+                    ></img>
 
-                    {/* Available for work indicator */}
-                    <div className="flex items-center gap-2 text-sm mt-2">
-                        <FaCircle className="text-green w-3 h-3 mt-5" />
-                        <span className="text-lg mt-5">Available for Work</span>
+                    <div className="text-center mt-4">
+                        <FaMapMarkerAlt className="inline mb-1 text-red-500" />
+                        {" "} New York, USA
                     </div>
+
                 </div>
 
                 {/* Right Side Wrapper- Details */}
@@ -25,18 +27,13 @@ const About = () => {
                         Hi. My name is Qirong ("Chee-Wrong"). Friends and family call me Jason.
                     </div>
                     <div className="text-bold text-lg mb-4 flex items-center space-x-2">
-                        Software Developer based in{" "}
-                        <FaMapMarkerAlt className="inline mb-1 text-red-500 ml-1" /> 
-                        New York.
+                        Software Developer with experience in full-stack development, DevOps, and
+                        AI.
                     </div>
 
                     <div className="mt-4">
-                        Currently seeking opportunities in full-time software development roles.
-                    </div>
-
-                    <div className="mt-4">
-                        In the mean time, I am working on personal projects to improve my skills 
-                        or am working/volunteering on the side.
+                        In my free time, I am usually working on personal projects to improve my skills or
+                        working/volunteering on the side.
                     </div>
 
                     <p className="mt-4">
