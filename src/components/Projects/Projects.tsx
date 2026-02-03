@@ -4,6 +4,12 @@ const Projects = () => {
 
     const projectInfo = [
         {
+            name: "Job Application Tracker",
+            description: "Command-Line Interface application that helps users track their job application status and company work-portal credentials. Features include adding, updating, deleting, and viewing job applications",
+            techStack: "TypeScript, Node.js",
+            link: "https://github.com/WhoThisPerson/job-application-tracker",
+        },
+        {
             name: "IBM DevOps and Software Engineering Capstone Project",
             description: "Application that extends an account microservice that manages customer data for a mock-ecommerce platform.",
             techStack: "Python, Flask, Kubernetes, Docker, PostgreSQL",
