@@ -22,19 +22,21 @@ const About = () => {
                 </div>
 
                 {/* Right Side Wrapper- Details */}
-                <div>
-                    <div className="text-bold text-xl mb-4 flex items-center space-x-2">
+                <div className="max-w-xl text-center sm:text-left">
+                    <h1 className="font-semibold text-2xl mb-4">
                         Hi. My name is Qirong ("Chee-Wrong"). Friends and family call me Jason.
-                    </div>
-                    <div className="text-bold text-lg mb-4 flex items-center space-x-2">
+                    </h1>
+                    <h2 className="text-l mb-4">
                         Software Developer with experience in full-stack development, DevOps, and
                         AI.
-                    </div>
+                    </h2>
 
-                    <div className="mt-4">
+                    <p className="mt-4">
+                        I enjoy building applications that solve problems, from backend systems to full-stack. 
                         In my free time, I am usually working on personal projects to improve my skills or
-                        working/volunteering on the side.
-                    </div>
+                        working/volunteering on the side. Outside of coding, I spend time gaming, cooking, exercising,
+                        and learning new things.
+                    </p>
 
                     <p className="mt-4">
                         Feel free to peruse at your interest. Check out my resume and other socials in 

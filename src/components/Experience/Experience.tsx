@@ -7,10 +7,10 @@ const Experience = () => {
             company: "Handshake",
             location: "Remote",
             position: "AI Fellow",
-            role_type: "Part-Time",
+            role_type: "Contract",
             start: "December 2025",
             end: "Present",
-            details: []
+            details: ["Assisting with Handshake AI projects whenever available"]
         },
         {
             company: "LadySurvivor & Family Benches",
