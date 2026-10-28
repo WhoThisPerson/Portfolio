@@ -9,18 +9,33 @@ const Skills = () => {
         "TypeScript",
         "Ruby",
         "Bash",
+        "SQL",
     ];
 
     const frameworks = [
         "React",
         "Node.js",
-        "Express",
+        "Express.js",
+        "Next.js",
+        "Spring",
+        "Vue"
     ];
 
     const databases = [
         "MySQL",
         "MongoDB",
+        "PostgresSQL"
     ];
+
+    const developerTools = [
+        "Git",
+        "GitHub",
+        "GitHub Actions",
+        "GitLab",
+        "Docker",
+        "Vercel AI SDK",
+        "Vite"
+    ]
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-5 border mt-10">
@@ -29,7 +44,7 @@ const Skills = () => {
             {programmingLanguages.map((language, index) => (
                 <span
                     key={index}
-                    className="inline-block border bg-gray-700 text-white rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 transition hover:bg-white hover:text-gray-dark hover:-translate-y-1"
+                    className="inline-block border text-white rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 transition hover:bg-white hover:text-gray-dark hover:-translate-y-1"
                 >
                     {language}
                 </span>
@@ -39,7 +54,7 @@ const Skills = () => {
             {frameworks.map((framework, index) => (
                 <span
                     key={index}
-                    className="inline-block border bg-gray-700 text-white rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 transition hover:bg-white hover:text-gray-dark hover:-translate-y-1"
+                    className="inline-block border text-white rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 transition hover:bg-white hover:text-gray-dark hover:-translate-y-1"
                 >
                     {framework}
                 </span>
@@ -49,9 +64,19 @@ const Skills = () => {
             {databases.map((database, index) => (
                 <span
                     key={index}
-                    className="inline-block border bg-gray-700 text-white rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 transition hover:bg-white hover:text-gray-dark hover:-translate-y-1"
+                    className="inline-block border text-white rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 transition hover:bg-white hover:text-gray-dark hover:-translate-y-1"
                 >
                     {database}
+                </span>
+            ))}
+
+            <h3 className="text-2xl font-semibold mb-3">Developer Tools</h3>
+            {developerTools.map((tool, index) => (
+                <span
+                    key={index}
+                    className="inline-block border text-white rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 transition hover:bg-white hover:text-gray-dark hover:-translate-y-1"
+                >
+                    {tool}
                 </span>
             ))}
 
