@@ -1,7 +1,7 @@
 import { Octokit } from "octokit";
 
 export const octokit = new Octokit({
-    auth: process.env.TOKEN
+    // auth: process.env.TOKEN
 });
 
 const OWNER = "WhoThisPerson";
@@ -18,6 +18,16 @@ export interface ProjectDetails {
 }
 
 /**
+ * Defines the information needed to display most recent commit
+ */
+export interface LatestPushEvent {
+    repoName: string,
+    repoUrl: string,
+    avatarUrl: string,
+    createdAt: string,
+}
+
+/**
  * @returns GitHub repository details
  */
 export async function getProjectDetails(): Promise<ProjectDetails[]> {
@@ -27,7 +37,7 @@ export async function getProjectDetails(): Promise<ProjectDetails[]> {
             username: OWNER,
             sort: "pushed",
             direction: "desc",
-            per_page: 5,
+            per_page: 3,
         });
 
         return response.data.map((repo) => ({
@@ -40,5 +50,32 @@ export async function getProjectDetails(): Promise<ProjectDetails[]> {
 
     } catch (error) {
         throw new Error("Failed to fetch repository data");
+    }
+}
+
+/**
+ * @returns details on most recent commit
+ */
+export async function getLatestPushEvent(): Promise<LatestPushEvent | null> {
+    try {
+        const response = await octokit.rest.activity.listPublicEventsForUser({
+            username: OWNER,
+            per_page: 100,
+        });
+
+        const latestPush = response.data.find(
+            (event) => event.type === "PushEvent"
+        );
+
+        if (!latestPush || !latestPush.created_at) return null;
+        
+        return {
+            repoName: latestPush.repo.name,
+            repoUrl: `https://github.com/${latestPush.repo.name}`,
+            avatarUrl: latestPush.actor.avatar_url,
+            createdAt: latestPush.created_at ?? null,
+        };
+    } catch (error) {
+        throw new Error("Failed to fetch GitHub events");
     }
 }
