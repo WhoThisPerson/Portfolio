@@ -1,11 +1,21 @@
-import { useState } from 'react';
+// import { useState } from 'react';
+
+// interface ContactFormData {
+//     name: string;
+//     email: string;
+//     subject: string;
+//     message: string;
+// }
+
 
 const Contact = () => {
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
-    const [body, setBody] = useState("");
+    // const [formData, setFormData] = useState<ContactFormData>({
+    //     name: "",
+    //     email: "",
+    //     subject: "",
+    //     message: ""
+    // });
 
     return (
         <div>
