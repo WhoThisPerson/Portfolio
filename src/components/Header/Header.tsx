@@ -1,61 +1,94 @@
-import { FaGithub, FaLinkedin} from 'react-icons/fa';
-import { HiDocumentText } from 'react-icons/hi';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiDocumentText } from "react-icons/hi";
 
-const Header = () => {
+interface HeaderProps {
+    pageToggle: "About" | "Projects" | "Resume" | "Contact";
+    setPageToggle: (page: HeaderProps["pageToggle"]) => void;
+}
 
-  const navLink = "hover:text-blue";
+const Header = ({ pageToggle, setPageToggle }: HeaderProps) => {
 
-  const iconLink = "flex items-center space-x-1 hover:text-blue";
+    const navLink = (page: HeaderProps["pageToggle"]) =>
+        `transition-colors duration-200 ${
+            pageToggle === page
+                ? "text-emerald-500"
+                : "hover:text-blue"
+        }`;
 
-  return (
-    <header className="bg-gray-dark text-gray-light shadow-md px-4 py-3 fixed top-0 w-full z-50 font-bold">
-      <nav className="flex justify-between items-center max-w-6xl mx-auto">
+    const iconLink = "flex items-center space-x-1 hover:text-blue";
 
-        <ul className="flex space-x-6 text-lg">
-          <li><a href="#About" className={navLink}>About</a></li>
-          <li><a href="#Projects" className={navLink}>Projects</a></li>
+    return (
+        <header className="bg-gray-dark text-gray-light shadow-md px-4 py-3 fixed top-0 w-full z-50 font-bold">
+            <nav className="flex justify-between items-center max-w-6xl mx-auto">
 
-        </ul>
+                <ul className="flex space-x-6 text-lg">
+                    <li>
+                        <button
+                            onClick={() => setPageToggle("About")}
+                            className={navLink("About")}
+                        >
+                            About
+                        </button>
+                    </li>
 
-        <ul className="flex space-x-4 text-lg">
-        <li>
-          <a
-            href="Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={iconLink}
-          >
-            <HiDocumentText />
-            <span>Resume</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/WhoThisPerson"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={iconLink}
-          >
-            <FaGithub />
-            <span>GitHub</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/qirongwu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={iconLink}
-          >
-            <FaLinkedin />
-            <span>LinkedIn</span>
-          </a>
-        </li>
+                    <li>
+                        <button
+                            onClick={() => setPageToggle("Projects")}
+                            className={navLink("Projects")}
+                        >
+                            Projects
+                        </button>
+                    </li>
 
-        </ul>
-      </nav>
-    </header>
-  );
+                    {/* <li>
+                        <button
+                            onClick={() => setPageToggle("Contact")}
+                            className={navLink("Contact")}
+                        >
+                            Contact
+                        </button>
+                    </li> */}
+                </ul>
+
+                <ul className="flex space-x-4 text-lg">
+                    <li>
+                        <button
+                            onClick={() => setPageToggle("Resume")}
+                            className={`${iconLink} ${navLink("Resume")}`}
+                        >
+                            <HiDocumentText />
+                            <span>Resume</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://github.com/WhoThisPerson"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={iconLink}
+                        >
+                            <FaGithub />
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/qirongwu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={iconLink}
+                        >
+                            <FaLinkedin />
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+    );
 };
 
 export default Header;
